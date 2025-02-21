@@ -8,7 +8,7 @@ conf = SparkConf().setMaster("local").setAppName("RatingsHistogram")
 sc = SparkContext(conf = conf)
 sc.setLogLevel("ERROR")
 
-lines = sc.textFile("../data/ml-100k/u.data")
+lines = sc.textFile("data/ml-100k/u.data")
 # extract (map) the data we care about
 ratings = lines.map(lambda x: x.split()[2])
 result = ratings.countByValue()
