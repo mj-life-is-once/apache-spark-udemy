@@ -24,3 +24,6 @@ wordCountsSorted = wordCounts.sort("count")
 
 # show the full results
 wordCountsSorted.show(wordCountsSorted.count())
+
+# stop the session
+spark.stop()
