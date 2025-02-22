@@ -2,6 +2,7 @@ import re
 from pyspark import SparkConf, SparkContext
 
 def normalizeWords(text):
+    # normal python expression
     return re.compile(r'\W+', re.UNICODE).split(text.lower())
 
 conf = SparkConf().setMaster("local").setAppName("WordCount")
